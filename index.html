@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Ajit Kumar Sharma - Software Developer, Full Stack Developer, and MCA Student. View my projects, skills, certifications, and experience.">
+  <meta name="author" content="Ajit Kumar Sharma">
+  <meta name="keywords" content="Ajit Kumar Sharma, Software Developer, MCA, Bangalore, Portfolio, Full Stack Developer, Java, Python, Web Developer">
+  <title>Ajit Kumar Sharma | Software Developer & MCA Candidate</title>
+  
+  <!-- Favicon placeholder (initials AKS) -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%234F8EF7%22 font-family=%22sans-serif%22 font-weight=%22bold%22>AKS</text></svg>">
+
+  <!-- Google Fonts: Inter and Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Local Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+  <!-- Canvas for particle background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Sticky Navigation Bar -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo" id="nav-logo">AKS<span class="dot">.</span></a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#certifications" class="nav-link">Certificates</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle Light/Dark Mode">
+          <i class="fa-solid fa-moon moon-icon"></i>
+          <i class="fa-solid fa-sun sun-icon"></i>
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <div class="hero-intro">Hello, I am</div>
+        <h1 class="hero-name">Ajit Kumar Sharma</h1>
+        <div class="hero-roles">
+          I am a <span class="typing-text" id="typing-text"></span><span class="typed-cursor">|</span>
+        </div>
+        <p class="hero-tagline">Motivated developer passionate about building efficient, scalable solutions.</p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary" id="cta-view-projects">
+            <span class="btn-text">View Projects</span>
+            <i class="fa-solid fa-arrow-down"></i>
+          </a>
+          <a href="resume.pdf" class="btn btn-outline" id="cta-download-resume" download>
+            <span class="btn-text">Download Resume</span>
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator">
+        <a href="#about" aria-label="Scroll down to about me section">
+          <span class="mouse-icon">
+            <span class="wheel"></span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT ME SECTION -->
+    <section id="about" class="about-section scroll-reveal">
+      <div class="container">
+        <h2 class="section-title"><span class="highlight">01.</span> About Me</h2>
+        <div class="about-content">
+          <div class="about-image-container">
+            <div class="avatar-ring">
+              <div class="avatar-circle">
+                <span class="avatar-initials">AKS</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-text">
+            <p class="bio-paragraph">
+              Motivated and detail-oriented MCA candidate with strong skills in software development, troubleshooting, automation, and database management. Proficient in Java, Python, SQL, and web technologies with a passion for learning emerging technologies. Possess strong analytical thinking, problem-solving abilities, and teamwork skills developed through academic projects and certifications. Eager to contribute technical expertise and innovative ideas to a dynamic organization while delivering efficient solutions. Dedicated to continuous learning, professional growth, and building a successful career in the IT industry.
+            </p>
+            <div class="about-meta-grid">
+              <div class="meta-item">
+                <span class="meta-label">Based in:</span>
+                <span class="meta-val">Anchepalya, Bangalore, India</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Email:</span>
+                <a href="mailto:ajitsharmaa02@gmail.com" class="meta-val highlight-hover">ajitsharmaa02@gmail.com</a>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Languages:</span>
+                <span class="meta-val">English, Hindi, Kannada</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Date of Birth:</span>
+                <span class="meta-val">13 May 2000</span>
+              </div>
+            </div>
+            <div class="about-status">
+              <span class="pulse-indicator"></span>
+              <span class="status-text">Available for Internships & Full-time Opportunities</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SKILLS SECTION -->
+    <section id="skills" class="skills-section scroll-reveal">
+      <div class="container">
+        <h2 class="section-title"><span class="highlight">02.</span> Technical Skills</h2>
+        <p class="section-subtitle">A compilation of languages, tools, and frameworks I have worked with:</p>
+        
+        <div class="skills-grid">
+          <!-- Category: Languages -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <i class="fa-solid fa-code"></i>
+              <h3>Languages</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info"><span>Java</span><span>90%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>JavaScript</span><span>85%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>SQL</span><span>85%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Python</span><span>80%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>C</span><span>75%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category: Frameworks & Web -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <i class="fa-solid fa-cubes"></i>
+              <h3>Frameworks</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info"><span>React.js</span><span>80%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Node.js</span><span>75%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Express.js</span><span>75%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category: Backend & Databases -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <i class="fa-solid fa-server"></i>
+              <h3>Backend & DBs</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info"><span>REST APIs</span><span>85%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Microservices</span><span>70%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 70%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>MySQL</span><span>85%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>PostgreSQL</span><span>80%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>MongoDB</span><span>75%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category: Tools & Core Concepts -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <h3>Tools & Core</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info"><span>Git & GitHub</span><span>90%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Linux</span><span>75%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>DSA</span><span>80%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>OOPs</span><span>85%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>System Design</span><span>70%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 70%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="additional-skills-layout">
+          <!-- Card 1: Soft Skills -->
+          <div class="skills-subset-card">
+            <h3><i class="fa-solid fa-users"></i> Soft Skills</h3>
+            <div class="tags-grid">
+              <span class="skill-tag"><i class="fa-solid fa-comments"></i> Communication</span>
+              <span class="skill-tag"><i class="fa-regular fa-clock"></i> Time Management</span>
+              <span class="skill-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Creativity</span>
+              <span class="skill-tag"><i class="fa-solid fa-arrows-spin"></i> Adaptability</span>
+              <span class="skill-tag"><i class="fa-solid fa-users-gear"></i> Team Management</span>
+              <span class="skill-tag"><i class="fa-solid fa-star"></i> Leadership Qualities</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Competencies -->
+          <div class="skills-subset-card">
+            <h3><i class="fa-solid fa-gears"></i> Other Competencies</h3>
+            <div class="tags-grid">
+              <span class="skill-tag"><i class="fa-solid fa-brain"></i> Machine Learning</span>
+              <span class="skill-tag"><i class="fa-regular fa-file-excel"></i> MS Excel</span>
+              <span class="skill-tag"><i class="fa-regular fa-file-word"></i> MS Office</span>
+              <span class="skill-tag"><i class="fa-solid fa-robot"></i> Automation</span>
+              <span class="skill-tag"><i class="fa-solid fa-bug"></i> Troubleshooting</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Interests -->
+          <div class="skills-subset-card">
+            <h3><i class="fa-solid fa-heart"></i> Interests & Hobbies</h3>
+            <div class="tags-grid">
+              <span class="skill-tag"><i class="fa-solid fa-laptop-code"></i> Java / Python / Web Dev</span>
+              <span class="skill-tag"><i class="fa-solid fa-terminal"></i> Software Developer</span>
+              <span class="skill-tag"><i class="fa-solid fa-kitchen-set"></i> Cooking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PROJECTS SECTION -->
+    <section id="projects" class="projects-section scroll-reveal">
+      <div class="container">
+        <h2 class="section-title"><span class="highlight">03.</span> Featured Projects</h2>
+        <p class="section-subtitle">A showcase of systems and applications I have developed:</p>
+        
+        <div class="projects-grid">
+          <!-- Card 1: Hotel Management System -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-folder"><i class="fa-regular fa-folder-open"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/ajit-kumar-sharma" target="_blank" rel="noopener noreferrer" title="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="live-demo-link" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">Hotel Management System</h3>
+            <p class="project-desc">A comprehensive system for booking, billing, customer, and staff management designed to improve hotel operational efficiency. Features smooth billing automation and robust database handling.</p>
+            <div class="project-tech-tags">
+              <span>Java</span>
+              <span>Database</span>
+              <span>CRUD</span>
+              <span>Management System</span>
+            </div>
+            <div class="project-footer-btns">
+              <a href="https://github.com/ajit-kumar-sharma" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-git"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn-card btn-card-live live-demo-link"><i class="fa-solid fa-play"></i> Demo</a>
+            </div>
+          </div>
+
+          <!-- Card 2: Personal Expense Tracker -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-folder"><i class="fa-regular fa-folder-open"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/ajit-kumar-sharma" target="_blank" rel="noopener noreferrer" title="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="live-demo-link" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">Personal Expense Tracker</h3>
+            <p class="project-desc">A Python-based desktop application utilizing both a console-based flow and a rich Tkinter graphical user interface to log, organize daily expenses, and generate detailed spending reports.</p>
+            <div class="project-tech-tags">
+              <span>Python</span>
+              <span>Tkinter</span>
+              <span>Data Tracking</span>
+              <span>GUI</span>
+            </div>
+            <div class="project-footer-btns">
+              <a href="https://github.com/ajit-kumar-sharma" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-git"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn-card btn-card-live live-demo-link"><i class="fa-solid fa-play"></i> Demo</a>
+            </div>
+          </div>
+
+          <!-- Card 3: Amazon-Flipkart Price Comparison Engine -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-folder"><i class="fa-regular fa-folder-open"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/ajit-kumar-sharma" target="_blank" rel="noopener noreferrer" title="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="live-demo-link" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">Amazon–Flipkart Price Comparison</h3>
+            <p class="project-desc">A full-stack application that queries, scrapes, and aggregates product listings and prices from Amazon and Flipkart in real time, presenting comparisons on a responsive React frontend interface.</p>
+            <div class="project-tech-tags">
+              <span>Flask</span>
+              <span>React</span>
+              <span>Full Stack</span>
+              <span>Web Scraping</span>
+            </div>
+            <div class="project-footer-btns">
+              <a href="https://github.com/ajit-kumar-sharma" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-git"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn-card btn-card-live live-demo-link"><i class="fa-solid fa-play"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. INTERNSHIP / EXPERIENCE SECTION -->
+    <section id="experience" class="experience-section scroll-reveal">
+      <div class="container">
+        <h2 class="section-title"><span class="highlight">04.</span> Professional Experience</h2>
+        
+        <div class="timeline-container">
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">1st Jan 2026 – 30th Jun 2026</span>
+              <h3 class="timeline-role">Software Developer <span class="at-company">@ Humming Byte Technologies</span></h3>
+              <p class="timeline-desc">
+                Contributed to designing and developing robust web systems, debugging software components, automating database queries, and streamlining development workflows. Collaborated with cross-functional teams to resolve issues and deliver high-performance applications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. EDUCATION SECTION -->
+    <section id="education" class="education-section scroll-reveal">
+      <div class="container">
+        <h2 class="section-title"><span class="highlight">05.</span> Education</h2>
+        
+        <div class="education-timeline">
+          <!-- MCA -->
+          <div class="edu-card">
+            <div class="edu-year">2024 – 2026</div>
+            <div class="edu-details">
+              <h3>Master of Computer Applications (MCA)</h3>
+              <p class="edu-school">Reva University, Bangalore</p>
+              <p class="edu-info">Focused on Advanced Software Engineering, Data Structures & Algorithms, Web Technologies, and Database Systems.</p>
+            </div>
+          </div>
+
+          <!-- BSc PCM -->
+          <div class="edu-card">
+            <div class="edu-year">2019 – 2022</div>
+            <div class="edu-details">
+              <h3>Bachelor of Science (BSc - Physics, Chemistry, Maths)</h3>
+              <p class="edu-school">Capital University, Koderma Jharkhand</p>
+              <p class="edu-info">Graduated with a strong foundation in mathematical logic, physics concepts, and analytical problem-solving.</p>
+            </div>
+          </div>
+
+          <!-- 12th BSEB -->
+          <div class="edu-card">
+            <div class="edu-year">2016 – 2018</div>
+            <div class="edu-details">
+              <h3>Intermediate (12th Grade)</h3>
+              <p class="edu-school">K K M College, Jamui, Bihar (BSEB)</p>
+              <p class="edu-info">Specialized in Science (PCM stream).</p>
+            </div>
+          </div>
+
+          <!-- 10th -->
+          <div class="edu-card">
+            <div class="edu-year">2016</div>
+            <div class="edu-details">
+              <h3>Matriculation (10th Grade)</h3>
+              <p class="edu-school">UTKRAMIT MADHYAMIK SCHOOL TIHIADINAR, Jamui, Bihar</p>
+              <p class="edu-info">Completed secondary school education.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CERTIFICATIONS SECTION -->
+    <section id="certifications" class="certifications-section scroll-reveal">
+      <div class="container">
+        <h2 class="section-title"><span class="highlight">06.</span> Certifications</h2>
+        <p class="section-subtitle">Courses and credentials earned to strengthen my technical expertise:</p>
+        
+        <div class="certifications-grid">
+          <!-- Cert 1 -->
+          <div class="cert-card">
+            <div class="cert-icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3 class="cert-title">Cisco Certified Support Technician (CCST)</h3>
+            <p class="cert-org">Cybersecurity (Global Certification) | Cisco</p>
+          </div>
+          <!-- Cert 2 -->
+          <div class="cert-card">
+            <div class="cert-icon-wrapper"><i class="fa-solid fa-robot"></i></div>
+            <h3 class="cert-title">Applied Generative AI</h3>
+            <p class="cert-org">Infosys springboard</p>
+          </div>
+          <!-- Cert 3 -->
+          <div class="cert-card">
+            <div class="cert-icon-wrapper"><i class="fa-solid fa-network-wired"></i></div>
+            <h3 class="cert-title">The Bits and Bytes of Computer Networking</h3>
+            <p class="cert-org">Courseera</p>
+          </div>
+          <!-- Cert 4 -->
+          <div class="cert-card">
+            <div class="cert-icon-wrapper"><i class="fa-brands fa-python"></i></div>
+            <h3 class="cert-title">Python foundation</h3>
+            <p class="cert-org">Infosys springboard</p>
+          </div>
+          <!-- Cert 5 -->
+          <div class="cert-card">
+            <div class="cert-icon-wrapper"><i class="fa-solid fa-brain"></i></div>
+            <h3 class="cert-title">Element of AI</h3>
+            <p class="cert-org">MinnaLearn</p>
+            <p class="cert-desc">Basics of artificial intelligence and their purpose in day-to day scenario.</p>
+          </div>
+          <!-- Cert 6 -->
+          <div class="cert-card">
+            <div class="cert-icon-wrapper"><i class="fa-solid fa-diagram-project"></i></div>
+            <h3 class="cert-title">Data Structures and Algorithms</h3>
+            <p class="cert-org">Infosys springboard</p>
+          </div>
+          <!-- Cert 7 -->
+          <div class="cert-card">
+            <div class="cert-icon-wrapper"><i class="fa-brands fa-python"></i></div>
+            <h3 class="cert-title">Basics of Python</h3>
+            <p class="cert-org">Coursera</p>
+          </div>
+          <!-- Cert 8 -->
+          <div class="cert-card">
+            <div class="cert-icon-wrapper"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3 class="cert-title">Entrepreneurship</h3>
+            <p class="cert-org">Udemy</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CONTACT SECTION -->
+    <section id="contact" class="contact-section scroll-reveal">
+      <div class="container">
+        <h2 class="section-title"><span class="highlight">07.</span> Get In Touch</h2>
+        
+        <div class="contact-layout">
+          <div class="contact-info-panel">
+            <div class="badge-opp">
+              <span class="pulsing-green"></span>
+              Open to Opportunities
+            </div>
+            <h3>Let's build something together!</h3>
+            <p class="contact-sub">Feel free to reach out for collaborations, job opportunities, or just to say hello. I'll get back to you as soon as possible.</p>
+            
+            <div class="contact-details">
+              <div class="contact-detail-item">
+                <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <h4>Email Me</h4>
+                  <a href="mailto:ajitsharmaa02@gmail.com" class="detail-link">ajitsharmaa02@gmail.com</a>
+                </div>
+              </div>
+              
+              <div class="contact-detail-item">
+                <div class="icon-circle"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <h4>Call Me</h4>
+                  <a href="tel:+916206047418" class="detail-link">+91 62060 47418</a>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <h4>Location</h4>
+                  <p class="detail-text">Anchepalya Nagasandra post, Bangalore, India</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links-row">
+              <a href="https://github.com/ajit-kumar-sharma" target="_blank" rel="noopener noreferrer" title="GitHub" class="social-icon-btn"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/ajit-sharma011/" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social-icon-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="mailto:ajitsharmaa02@gmail.com" title="Email" class="social-icon-btn"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <div class="contact-form-panel">
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <input type="text" id="name" name="name" placeholder=" " required autocomplete="name">
+                <label for="name">Your Name</label>
+                <span class="error-msg" id="name-error">Please enter your name</span>
+              </div>
+              
+              <div class="form-group">
+                <input type="email" id="email" name="email" placeholder=" " required autocomplete="email">
+                <label for="email">Your Email</label>
+                <span class="error-msg" id="email-error">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group">
+                <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                <label for="message">Your Message</label>
+                <span class="error-msg" id="message-error">Please write your message</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit" id="form-submit-btn">
+                <span class="btn-text">Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              
+              <div class="form-status-alert hidden" id="form-status">
+                <i class="fa-solid fa-circle-check"></i>
+                <span id="form-status-text">Message sent successfully!</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2026 Ajit Kumar Sharma. All rights reserved.</p>
+      <p class="footer-design">Designed & Built with <i class="fa-solid fa-heart"></i> in Bangalore</p>
+      <a href="#home" class="back-to-top" aria-label="Scroll to top of the page">
+        <i class="fa-solid fa-chevron-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Local Script -->
+  <script src="script.js"></script>
+</body>
+</html>
